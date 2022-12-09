@@ -17,6 +17,7 @@
 package org.springframework.boot.system;
 
 import java.lang.invoke.MethodHandles;
+import java.io.Console;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -67,6 +68,41 @@ public enum JavaVersion {
 	 * Java 14.
 	 */
 	FOURTEEN("14", MethodHandles.Lookup.class, "hasFullPrivilegeAccess");
+
+	/**
+	 * Java 15.
+	 */
+	FIFTEEN("15", CharSequence.class, "isEmpty"),
+	
+	/**
+	 * Java 16.
+	 */
+	SIXTEEN("16", Stream.class, "toList"),
+	
+	/**
+	 * Java 17.
+	 */
+	SEVENTEEN("17", Console.class, "charset"),
+
+	/**
+	 * Java 18.
+	 */
+	EIGHTEEN("18", Duration.class, "isPositive"),
+
+	/**
+	 * Java 19.
+	 */
+	NINETEEN("19", Future.class, "state");
+
+	/**
+	 * Java 20.
+	 */
+	EIGHTEEN("18", Duration.class, "isPositive"),
+
+	/**
+	 * Java 21.
+	 */
+	NINETEEN("21", Future.class, "state");
 
 	private final String name;
 
